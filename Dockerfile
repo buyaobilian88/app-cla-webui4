@@ -5,9 +5,9 @@ MAINTAINER TommyLike<tommylikehu@gmail.com>
 RUN mkdir -p /home/cla-webui
 WORKDIR /home/cla-webui
 COPY . /home/cla-webui
-RUN npm install -g vue && \
-    npm install && \
-    npm run build
+RUN npm install pnpm -g
+RUN pnpm install
+RUN pnpm build
 
 FROM nginx:1.19.2
 COPY --from=Builder /home/cla-webui/dist /usr/share/nginx/html/

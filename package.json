@@ -81,5 +81,10 @@
     "alias": {
       "@assets": "src/assets"
     }
+  },
+  "pnpm": {
+    "overrides": {
+      "pdfjs-dist": "4.3.136"
+    }
   }
 }
